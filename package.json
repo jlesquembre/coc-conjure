@@ -1,0 +1,64 @@
+{
+  "name": "coc-conjure",
+  "version": "0.1.0",
+  "description": "conjure source for coc.nvim",
+  "scripts": {},
+  "engines": {
+    "coc": ">=0.0.57"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlesquembre/coc-conjure.git"
+  },
+  "keywords": [
+    "coc.nvim",
+    "conjure"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "coc.source.conjure.enable": {
+          "type": "boolean",
+          "default": true
+        },
+        "coc.source.conjure.shortcut": {
+          "type": "string",
+          "default": "CLJ"
+        },
+        "coc.source.conjure.disableSyntaxes": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        },
+        "coc.source.conjure.priority": {
+          "type": "integer",
+          "default": 99
+        },
+        "coc.source.conjure.filetypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "default": [
+            "clojure"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "author": "jl@lafuente.me",
+  "license": "MIT",
+  "homepage": "https://github.com/jlesquembre/coc-conjure",
+  "devDependencies": {
+    "coc.nvim": ">=0.0.57"
+  }
+}
