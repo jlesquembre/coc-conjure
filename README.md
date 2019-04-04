@@ -4,12 +4,6 @@
 
 ## Install
 
-For installation with [vim-plug][]:
-
-```viml
-Plug 'jlesquembre/coc-conjure'
-```
-
 In your `init.nvim`, add it to your list of coc extensions:
 
 ```viml
@@ -24,4 +18,3 @@ Alternatively, in your vim/neovim, run command:
 
 [conjure]: https://github.com/Olical/conjure
 [coc.nvim]: https://github.com/neoclide/coc.nvim
-[vim-plug]: https://github.com/junegunn/vim-plug
