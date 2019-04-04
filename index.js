@@ -9,7 +9,7 @@ exports.activate = async context => {
       triggerCharacters: [],
       doComplete: async function(opt) {
         if (!opt.input) return null;
-        const res = await nvim.eval(`conjure#omnicomplete(0, "${opt.input}")`);
+        const res = await nvim.eval(`conjure#completions("${opt.input}")`);
         if (!res || res.length == 0) return null;
         return { items: res };
       }
