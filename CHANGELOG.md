@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (2019-04-17)
+## 0.2.0 (2019-04-17)
 
 - Use conjure RPC server ([c5b3358](https://github.com/jlesquembre/coc-conjure/commit/c5b3358))
 
