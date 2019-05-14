@@ -43,7 +43,7 @@ exports.activate = async context => {
   context.subscriptions.push(
     sources.createSource({
       name: "conjure",
-      triggerCharacters: [],
+      triggerCharacters: [".", "/", ":"],
       doComplete: async function(opt) {
         const input = opt.input;
         if (!input) return null;
