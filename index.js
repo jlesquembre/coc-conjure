@@ -1,7 +1,6 @@
 const { sources, workspace } = require("coc.nvim");
 const { Socket } = require("net");
 
-
 function sendMessage(client, message) {
   return new Promise((resolve, reject) => {
     client.write(message);
@@ -15,7 +14,6 @@ function sendMessage(client, message) {
     });
   });
 }
-
 
 exports.activate = async context => {
   const { nvim } = workspace;
@@ -45,11 +43,13 @@ exports.activate = async context => {
       name: "conjure",
       triggerCharacters: [".", "/", ":"],
       doComplete: async function(opt) {
+        const autocomplete = await nvim.eval("conjure#should_autocomplete()");
         const input = opt.input;
-        if (!input) return null;
-
+        if (!input || autocomplete === 0) return null;
         const res = await conjureCompletions(input);
 
+        // e.g.:
+        // {word: "inc", kind: "f", menu: "clojure.core"}
         if (!res || res.length === 0) return null;
         return { items: res };
       }
