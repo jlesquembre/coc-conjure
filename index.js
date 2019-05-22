@@ -2,11 +2,13 @@ const { sources, workspace } = require("coc.nvim");
 const { Socket } = require("net");
 
 function sendMessage(client, message) {
+  let receivedData = "";
   return new Promise((resolve, reject) => {
     client.write(message);
 
     client.on("data", data => {
-      resolve(data);
+      receivedData += data.toString("utf8");
+      if (receivedData.endsWith("\n")) resolve(receivedData);
     });
 
     client.on("error", err => {
@@ -35,6 +37,7 @@ exports.activate = async context => {
     const req = [0, 1, "completions", [input]];
 
     const response = await sendMessage(client, JSON.stringify(req));
+    // context.logger.info(response);
     return JSON.parse(response)[3];
   }
 
