@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 (2019-05-22)
+
+- Handle properly long responses from Conjure
+  ([c3f7ff9](https://github.com/jlesquembre/coc-conjure/commit/c3f7ff9))
+
 ## 0.2.1 (2019-05-14)
 
 - Add triggerCharacters
