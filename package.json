@@ -63,6 +63,7 @@
   "homepage": "https://github.com/jlesquembre/coc-conjure",
   "devDependencies": {
     "coc.nvim": ">=0.0.57",
+    "conventional-changelog-cli": "^2.0.21",
     "release-it": "^10.4.2"
   }
 }

@@ -106,6 +106,11 @@ JSONStream@^1.0.4:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
+add-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/add-stream/-/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
+  integrity sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -555,6 +560,17 @@ conventional-changelog-atom@^2.0.1:
   dependencies:
     q "^1.5.1"
 
+conventional-changelog-cli@^2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-cli/-/conventional-changelog-cli-2.0.21.tgz#7469ddd663a8e68967b6d8c9c2cf207d1d7462f7"
+  integrity sha512-gMT1XvSVmo9Np1WUXz8Mvt3K+OtzR+Xu13z0jq/3qsXBbLuYc2/oaUXVr68r3fYOL8E9dN2uvX7Hc7RkeWvRVA==
+  dependencies:
+    add-stream "^1.0.0"
+    conventional-changelog "^3.1.8"
+    lodash "^4.2.1"
+    meow "^4.0.0"
+    tempfile "^1.1.1"
+
 conventional-changelog-codemirror@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/conventional-changelog-codemirror/-/conventional-changelog-codemirror-2.0.1.tgz#acc046bc0971460939a0cc2d390e5eafc5eb30da"
@@ -566,6 +582,14 @@ conventional-changelog-conventionalcommits@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-1.1.2.tgz#bb30c8d40dbd13ba9ec4e9bc6a025578b31b17bd"
   integrity sha512-t8VyibJHGrtsDwSHjgpW9v7oBbqDGQooCMo/a2rc0z5cousV5O11palcSPpyshEVWVijxPtzBNG02EQkMDJ8CA==
+  dependencies:
+    compare-func "^1.3.1"
+    q "^1.5.1"
+
+conventional-changelog-conventionalcommits@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-3.0.2.tgz#3a380a14ecd6f5056da6d460e30dd6c0c9f1aebe"
+  integrity sha512-w1+fQSDnm/7+sPKIYC5nfRVYDszt+6HdWizrigSqWFVIiiBVzkHGeqDLMSHc+Qq9qssHVAxAak5206epZyK87A==
   dependencies:
     compare-func "^1.3.1"
     q "^1.5.1"
@@ -655,6 +679,23 @@ conventional-changelog@3.1.4:
     conventional-changelog-atom "^2.0.1"
     conventional-changelog-codemirror "^2.0.1"
     conventional-changelog-conventionalcommits "^1.1.2"
+    conventional-changelog-core "^3.2.2"
+    conventional-changelog-ember "^2.0.2"
+    conventional-changelog-eslint "^3.0.2"
+    conventional-changelog-express "^2.0.1"
+    conventional-changelog-jquery "^3.0.4"
+    conventional-changelog-jshint "^2.0.1"
+    conventional-changelog-preset-loader "^2.1.1"
+
+conventional-changelog@^3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/conventional-changelog/-/conventional-changelog-3.1.8.tgz#091382b5a0820bf8ec8e75ad2664a3688c31b07d"
+  integrity sha512-fb3/DOLLrQdNqN0yYn/lT6HcNsAa9A+VTDBqlZBMQcEPPIeJIMI+DBs3yu+eiYOLi22w9oShq3nn/zN6qm1Hmw==
+  dependencies:
+    conventional-changelog-angular "^5.0.3"
+    conventional-changelog-atom "^2.0.1"
+    conventional-changelog-codemirror "^2.0.1"
+    conventional-changelog-conventionalcommits "^3.0.2"
     conventional-changelog-core "^3.2.2"
     conventional-changelog-ember "^2.0.2"
     conventional-changelog-eslint "^3.0.2"
@@ -2214,7 +2255,7 @@ os-name@3.1.0, os-name@^3.0.0:
     macos-release "^2.2.0"
     windows-release "^3.1.0"
 
-os-tmpdir@~1.0.2:
+os-tmpdir@^1.0.0, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
@@ -2967,6 +3008,14 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
+tempfile@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/tempfile/-/tempfile-1.1.1.tgz#5bcc4eaecc4ab2c707d8bc11d99ccc9a2cb287f2"
+  integrity sha1-W8xOrsxKsscH2LwR2ZzMmiyyh/I=
+  dependencies:
+    os-tmpdir "^1.0.0"
+    uuid "^2.0.1"
+
 term-size@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
@@ -3175,6 +3224,11 @@ uuid@3.3.2, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+
+uuid@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
+  integrity sha1-Z+LoY3lyFVMN/zGOW/nc6/1Hsho=
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
