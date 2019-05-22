@@ -1,6 +1,6 @@
 {
   "name": "coc-conjure",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "conjure source for coc.nvim",
   "scripts": {
     "beforeStage": "sed -i \"s/Unreleased/${version}/\" CHANGELOG.md",
