@@ -24,7 +24,8 @@ Alternatively, in your vim/neovim, run command:
 Link the package to the CoC project:
 
 1. In `coc-conjure` directoy run `yarn link`
-1. In CoC extensions directory (`~/.config/coc/extensions` by default) run `yarn link "coc-conjure"`
+1. In CoC extensions directory (`~/.config/coc/extensions` by default) run
+   `yarn link "coc-conjure"`
 1. For debugging and auto-reload, add to your `init.vim`:
 
    ```viml
@@ -32,8 +33,9 @@ Link the package to the CoC project:
    let g:coc_watch_extensions = ['coc-conjure']
    ```
 
-For debugging, open `chrome://inspect/` in chrome
+1. To see log messages execute: `:CocOpenLog`
 
+For debugging, open `chrome://inspect/` in chrome
 
 [conjure]: https://github.com/Olical/conjure
 [coc.nvim]: https://github.com/neoclide/coc.nvim
