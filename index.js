@@ -2,9 +2,7 @@ const { sources, workspace } = require("coc.nvim");
 const { nvim } = workspace;
 
 async function completions(input) {
-  const p = await nvim.lua("return require('conjure.eval')['completions-promise'](...)", input)
-  await nvim.lua("require('conjure.promise').await(...)", p)
-  return nvim.lua("return require('conjure.promise').close(...)", p)
+  return nvim.lua("return require('conjure.eval')['completions-sync'](...)", input)
 }
 
 exports.activate = async context => {
