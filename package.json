@@ -58,6 +58,6 @@
   "license": "MIT",
   "homepage": "https://github.com/jlesquembre/coc-conjure",
   "devDependencies": {
-    "coc.nvim": ">=0.0.57"
+    "coc.nvim": "0.0.77"
   }
 }

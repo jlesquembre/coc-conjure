@@ -23,9 +23,9 @@ Alternatively, in your vim/neovim, run command:
 
 Link the package to the CoC project:
 
-1. In `coc-conjure` directoy run `yarn link`
+1. In `coc-conjure` directoy run `npm link`
 1. In CoC extensions directory (`~/.config/coc/extensions` by default) run
-   `yarn link "coc-conjure"`
+   `npm link "coc-conjure"`.
 1. For debugging and auto-reload, add to your `init.vim`:
 
    ```viml
