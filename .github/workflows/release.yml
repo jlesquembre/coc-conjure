@@ -1,0 +1,28 @@
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://registry.npmjs.org"
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v2.x
+      - run: npm install
+      - run: npm --no-git-tag-version version ${{ env.GITHUB_REF_SLUG }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     registry-url: "https://npm.pkg.github.com"
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
