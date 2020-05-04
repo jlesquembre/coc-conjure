@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0 (2020-05-04)
+
+- Support [Conjure v3](https://github.com/Olical/conjure/releases/tag/v3.0.0).
+  Previous versions are not supported. Mayor version number will be align with
+  Conjure versions from now
+
 ## 0.2.2 (2019-05-22)
 
 - Handle properly long responses from Conjure

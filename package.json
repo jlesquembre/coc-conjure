@@ -2,10 +2,6 @@
   "name": "coc-conjure",
   "version": "0.2.2",
   "description": "conjure source for coc.nvim",
-  "scripts": {
-    "beforeStage": "sed -i \"s/Unreleased/${version}/\" CHANGELOG.md",
-    "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
-  },
   "engines": {
     "coc": ">=0.0.57"
   },
@@ -62,8 +58,6 @@
   "license": "MIT",
   "homepage": "https://github.com/jlesquembre/coc-conjure",
   "devDependencies": {
-    "coc.nvim": ">=0.0.57",
-    "conventional-changelog-cli": "^2.0.21",
-    "release-it": "^10.4.2"
+    "coc.nvim": "0.0.77"
   }
 }
