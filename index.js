@@ -22,6 +22,8 @@ async function completions(input) {
 }
 
 exports.activate = async (context) => {
+  context.logger.info("CoC conjure enabled!");
+
   context.subscriptions.push(
     sources.createSource({
       name: "conjure",
@@ -33,7 +35,7 @@ exports.activate = async (context) => {
         if (!res || res.length === 0) return null;
         return {
           items: res.map((word) => ({
-            word,
+            ...word,
             menu: this.menu,
           })),
         };
