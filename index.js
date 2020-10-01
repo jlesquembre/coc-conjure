@@ -34,10 +34,11 @@ exports.activate = async (context) => {
         const res = await completions(input);
         if (!res || res.length === 0) return null;
         return {
-          items: res.map((word) => ({
-            ...word,
-            menu: this.menu,
-          })),
+          items: res.map((word) => typeof word === 'string' ? ({ word }) : word)
+            .map((word) => ({
+              ...word,
+              menu: word.menu || this.menu,
+            })),
         };
       },
     })
