@@ -45,7 +45,8 @@
             "null"
           ],
           "default": [
-            "clojure"
+            "clojure",
+            "fennel"
           ],
           "items": {
             "type": "string"
