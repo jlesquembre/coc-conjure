@@ -2,7 +2,7 @@ const { sources, workspace } = require("coc.nvim");
 const { nvim } = workspace;
 
 async function lua(mod, f, arg) {
-  return nvim.lua("return require('" + mod + "')['" + f + "'](...)", arg);
+  return nvim.executeLua("return require('" + mod + "')['" + f + "'](...)", [arg]);
 }
 
 async function snooze(ms) {

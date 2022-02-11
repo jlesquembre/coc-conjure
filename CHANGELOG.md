@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1 (2022-02-11)
+
+- Support latest `coc.nvim` which has changed the function from `nvim.lua`
+  to `nvim.executeLua`.
+
 ## 3.0.0 (2020-05-04)
 
 - Support [Conjure v3](https://github.com/Olical/conjure/releases/tag/v3.0.0).
