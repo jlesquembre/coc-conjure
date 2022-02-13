@@ -1,9 +1,14 @@
 # Changelog
 
-## 3.0.1 (2022-02-11)
+## 3.0.2 (2022-02-11)
 
-- Support latest `coc.nvim` which has changed the function from `nvim.lua`
-  to `nvim.executeLua`.
+- Support latest `coc.nvim` which has changed the function from `nvim.lua` to
+  `nvim.executeLua`.
+
+## 3.0.1 (2021-09-29)
+
+- Make it compatible with latest CoC Latest. Thanks to @BerkeleyTrue for fixing
+  the issue
 
 ## 3.0.0 (2020-05-04)
 
