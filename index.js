@@ -21,6 +21,22 @@ async function completions(input) {
   return lua("conjure.promise", "close", p);
 }
 
+function fixWhitespace(str, c) {
+  return str.split(c).map((s) => s.trim()).filter((s) => s);
+}
+
+function formatDocstring({word, info, menu}) {
+  if (typeof info === "string") {
+    return fixWhitespace(info, "\n").join("\n")
+  }
+  if (typeof menu === "string") {
+    const splits = fixWhitespace(menu, " ");
+    const namespace = splits[0];
+    const params = splits.slice(1).join(" ");
+    return `${namespace}/${word}\n(${params})`
+  }
+}
+
 exports.activate = async (context) => {
   context.logger.info("CoC conjure enabled!");
 
@@ -34,9 +50,10 @@ exports.activate = async (context) => {
         const res = await completions(input);
         if (!res || res.length === 0) return null;
         return {
-          items: res.map((word) => ({
-            ...word,
-            menu: this.menu,
+          items: res.map((item) => ({
+            word: item.word,
+            kind: item.kind?.toLowerCase(),
+            info: formatDocstring(item),
           })),
         };
       },
